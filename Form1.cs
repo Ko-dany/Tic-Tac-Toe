@@ -30,12 +30,20 @@ namespace DkoAssignment1
                 slot.Image = null;
             }
             _gameManager.Initializer();
+            currentPlayer = _gameManager.GetCurrentPlayer();
+            ShowWhoesTurn();
+        }
+
+        private void ShowWhoesTurn()
+        {
+            lblGameStatus.Text = $"Player {currentPlayer}'s turn!";
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
             _gameManager = new GameManager();
             currentPlayer = _gameManager.GetCurrentPlayer();
+            ShowWhoesTurn();
 
             slotsList.Add(picSlot1);
             slotsList.Add(picSlot2);
@@ -82,6 +90,7 @@ namespace DkoAssignment1
                     {
                         _gameManager.SwitchCurrentPlayer();
                         currentPlayer = _gameManager.GetCurrentPlayer();
+                        ShowWhoesTurn();
                     }
                 }
                 else
