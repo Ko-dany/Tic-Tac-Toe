@@ -11,16 +11,16 @@ namespace GameManagement
         void Initializer();
         // Initialize the game.
 
-        char GetCurrentPlayer();
+        string GetCurrentPlayer();
         // Returns current player
 
         void SwitchCurrentPlayer();
 
-        bool CheckTheSelectedCell(int selectedCell);
+        bool SelectedSlotIsValid(int selectedCell);
         // Check if the selected cell is available.
         // Returns true if it's available.
 
-        void StoreCellData(int selectedCell, char player);
+        void StoreSlotData(int selectedCell, string player);
         // Store the cell data.
 
         string GetGameResult();

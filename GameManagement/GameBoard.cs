@@ -8,12 +8,17 @@ namespace GameManagement
 {
     internal class GameBoard
     {
-        public Dictionary<int, char?> Board { get; set; }
-        public char CurrentPlayer { get; set; }
+        public Dictionary<int, string> Board { get; set; }
+        public string CurrentPlayer { get; set; }
 
         public GameBoard()
         {
-            CurrentPlayer = 'X';
+            Board = new Dictionary<int, string>();
+            for(int i = 1; i<10; i++)
+            {
+                Board[i] = null;
+            }
+            CurrentPlayer = "X";
         }
     }
 }

@@ -55,8 +55,10 @@
             this.picSlot1.Location = new System.Drawing.Point(57, 47);
             this.picSlot1.Name = "picSlot1";
             this.picSlot1.Size = new System.Drawing.Size(110, 110);
+            this.picSlot1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSlot1.TabIndex = 0;
             this.picSlot1.TabStop = false;
+            this.picSlot1.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // picSlot2
             // 
@@ -64,8 +66,10 @@
             this.picSlot2.Location = new System.Drawing.Point(214, 47);
             this.picSlot2.Name = "picSlot2";
             this.picSlot2.Size = new System.Drawing.Size(110, 110);
+            this.picSlot2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSlot2.TabIndex = 0;
             this.picSlot2.TabStop = false;
+            this.picSlot2.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // picSlot3
             // 
@@ -73,8 +77,10 @@
             this.picSlot3.Location = new System.Drawing.Point(365, 47);
             this.picSlot3.Name = "picSlot3";
             this.picSlot3.Size = new System.Drawing.Size(110, 110);
+            this.picSlot3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSlot3.TabIndex = 0;
             this.picSlot3.TabStop = false;
+            this.picSlot3.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // picSlot4
             // 
@@ -82,8 +88,10 @@
             this.picSlot4.Location = new System.Drawing.Point(57, 188);
             this.picSlot4.Name = "picSlot4";
             this.picSlot4.Size = new System.Drawing.Size(110, 110);
+            this.picSlot4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSlot4.TabIndex = 0;
             this.picSlot4.TabStop = false;
+            this.picSlot4.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // picSlot5
             // 
@@ -91,8 +99,10 @@
             this.picSlot5.Location = new System.Drawing.Point(214, 188);
             this.picSlot5.Name = "picSlot5";
             this.picSlot5.Size = new System.Drawing.Size(110, 110);
+            this.picSlot5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSlot5.TabIndex = 0;
             this.picSlot5.TabStop = false;
+            this.picSlot5.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // picSlot6
             // 
@@ -100,8 +110,10 @@
             this.picSlot6.Location = new System.Drawing.Point(365, 188);
             this.picSlot6.Name = "picSlot6";
             this.picSlot6.Size = new System.Drawing.Size(110, 110);
+            this.picSlot6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSlot6.TabIndex = 0;
             this.picSlot6.TabStop = false;
+            this.picSlot6.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // picSlot7
             // 
@@ -109,8 +121,10 @@
             this.picSlot7.Location = new System.Drawing.Point(57, 321);
             this.picSlot7.Name = "picSlot7";
             this.picSlot7.Size = new System.Drawing.Size(110, 110);
+            this.picSlot7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSlot7.TabIndex = 0;
             this.picSlot7.TabStop = false;
+            this.picSlot7.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // picSlot8
             // 
@@ -118,8 +132,10 @@
             this.picSlot8.Location = new System.Drawing.Point(214, 321);
             this.picSlot8.Name = "picSlot8";
             this.picSlot8.Size = new System.Drawing.Size(110, 110);
+            this.picSlot8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSlot8.TabIndex = 0;
             this.picSlot8.TabStop = false;
+            this.picSlot8.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // picSlot9
             // 
@@ -127,8 +143,10 @@
             this.picSlot9.Location = new System.Drawing.Point(365, 321);
             this.picSlot9.Name = "picSlot9";
             this.picSlot9.Size = new System.Drawing.Size(110, 110);
+            this.picSlot9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSlot9.TabIndex = 0;
             this.picSlot9.TabStop = false;
+            this.picSlot9.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // lblGameStatus
             // 
@@ -158,6 +176,7 @@
             this.Controls.Add(this.picSlot1);
             this.Name = "frmMain";
             this.Text = "Tic Tac Toe";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picSlot1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSlot2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSlot3)).EndInit();

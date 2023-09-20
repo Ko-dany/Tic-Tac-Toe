@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,43 +28,45 @@ namespace GameManagement
             _gameBoard = new GameBoard();
         }
 
-        public char GetCurrentPlayer()
+        public string GetCurrentPlayer()
         {
             return _gameBoard.CurrentPlayer;
         }
 
         public void SwitchCurrentPlayer()
         {
-            _gameBoard.CurrentPlayer = (_gameBoard.CurrentPlayer == 'X' ? 'O' : 'X');
+            _gameBoard.CurrentPlayer = (_gameBoard.CurrentPlayer == "X" ? "O" : "X");
         }
 
-        public bool CheckTheSelectedCell(int selectedCell)
+        public bool SelectedSlotIsValid(int selectedCell)
         {
-            return !_gameBoard.Board.ContainsKey(selectedCell);
+            return _gameBoard.Board[selectedCell] == null;
             // Returns true if the cell is empty.
         }
 
-        public void StoreCellData(int selectedCell, char player)
+        public void StoreSlotData(int selectedCell, string player)
         {
             _gameBoard.Board[selectedCell] = player;
         }
 
         public string GetGameResult()
         {
-            string gameResult = _gameBoard.Board.Count == 9 ? "Draw" : null;
+            string gameResult = null;
+
+            if (_gameBoard.Board.Values.All(value => value != null)) gameResult = "Draw";
 
             foreach (int[] condition in winningConditions)
             {
-                if (_gameBoard.Board[condition[0]] == 'X'
-                    && _gameBoard.Board[condition[1]] == 'X'
-                    && _gameBoard.Board[condition[2]] == 'X')
+                if (_gameBoard.Board[condition[0]] == "X"
+                    && _gameBoard.Board[condition[1]] == "X"
+                    && _gameBoard.Board[condition[2]] == "X")
                 {
                     gameResult = "X";
                     break;
                 }
-                else if (_gameBoard.Board[condition[0]] == 'O'
-                    && _gameBoard.Board[condition[1]] == 'O'
-                    && _gameBoard.Board[condition[2]] == 'O')
+                else if (_gameBoard.Board[condition[0]] == "O"
+                    && _gameBoard.Board[condition[1]] == "O"
+                    && _gameBoard.Board[condition[2]] == "O")
                 {
                     gameResult = "O";
                     break;
