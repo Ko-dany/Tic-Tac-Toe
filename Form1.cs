@@ -18,33 +18,33 @@ namespace DkoAssignment1
             InitializeComponent();
         }
 
+        /************ Decalre global variables ************/
         private List<PictureBox> slotsList = new List<PictureBox>();
-
         private GameManager _gameManager;
         private string currentPlayer;
+        /**************************************************/
 
+        /************ Set helper methods ************/
         private void InitializeGame()
         {
            foreach(PictureBox slot in slotsList)
             {
                 slot.Image = null;
             }
-            _gameManager.Initializer();
+            _gameManager.InitializeBoard();
             currentPlayer = _gameManager.GetCurrentPlayer();
-            ShowWhoesTurn();
+            ShowWhoseTurn();
         }
 
-        private void ShowWhoesTurn()
+        private void ShowWhoseTurn()
         {
             lblGameStatus.Text = $"Player {currentPlayer}'s turn!";
         }
+        /**************************************************/
+
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            _gameManager = new GameManager();
-            currentPlayer = _gameManager.GetCurrentPlayer();
-            ShowWhoesTurn();
-
             slotsList.Add(picSlot1);
             slotsList.Add(picSlot2);
             slotsList.Add(picSlot3);
@@ -54,14 +54,18 @@ namespace DkoAssignment1
             slotsList.Add(picSlot7);
             slotsList.Add(picSlot8);
             slotsList.Add(picSlot9);
+
+            _gameManager = new GameManager();
+            currentPlayer = _gameManager.GetCurrentPlayer();
+            ShowWhoseTurn();
         }
 
         private void PictureBox_Click(object sender, EventArgs e)
         {
-
             if (sender is PictureBox clickedPictureBox)
             {
                 int selectedSlot = int.Parse((clickedPictureBox.Name[clickedPictureBox.Name.Length - 1]).ToString());
+                // Extract the slot number (1-9) from the name
 
                 if (_gameManager.SelectedSlotIsValid(selectedSlot))
                 {
@@ -90,7 +94,7 @@ namespace DkoAssignment1
                     {
                         _gameManager.SwitchCurrentPlayer();
                         currentPlayer = _gameManager.GetCurrentPlayer();
-                        ShowWhoesTurn();
+                        ShowWhoseTurn();
                     }
                 }
                 else

@@ -175,7 +175,7 @@
             this.Controls.Add(this.picSlot2);
             this.Controls.Add(this.picSlot1);
             this.Name = "frmMain";
-            this.Text = "Tic Tac Toe";
+            this.Text = "Tic Tac Toe - Dahyun Ko";
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picSlot1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSlot2)).EndInit();

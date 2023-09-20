@@ -9,7 +9,7 @@ namespace GameManagement
     internal class GameBoard
     {
         public Dictionary<int, string> Board { get; set; }
-        public string CurrentPlayer { get; set; }
+        public string GamePlayer { get; set; }
 
         public GameBoard()
         {
@@ -18,7 +18,7 @@ namespace GameManagement
             {
                 Board[i] = null;
             }
-            CurrentPlayer = "X";
+            GamePlayer = "X";
         }
     }
 }

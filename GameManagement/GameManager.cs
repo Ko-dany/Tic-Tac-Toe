@@ -23,33 +23,40 @@ namespace GameManagement
 
         GameBoard _gameBoard = new GameBoard();
         
-        public void Initializer()
+        public void InitializeBoard()
+            // Set up a new GameBoard.
         {
             _gameBoard = new GameBoard();
         }
 
         public string GetCurrentPlayer()
+            // Get the current player from the gameboard.
         {
-            return _gameBoard.CurrentPlayer;
+            return _gameBoard.GamePlayer;
         }
 
         public void SwitchCurrentPlayer()
+            // Swtich the current player on the gameboard.
         {
-            _gameBoard.CurrentPlayer = (_gameBoard.CurrentPlayer == "X" ? "O" : "X");
+            _gameBoard.GamePlayer = _gameBoard.GamePlayer == "X" ? "O" : "X";
         }
 
         public bool SelectedSlotIsValid(int selectedCell)
+            // Check if the selected slot is already occupied and return "true" if it's empty.
         {
             return _gameBoard.Board[selectedCell] == null;
-            // Returns true if the cell is empty.
         }
 
         public void StoreSlotData(int selectedCell, string player)
+            // Store which player took which slot to the gameboard.
         {
             _gameBoard.Board[selectedCell] = player;
         }
 
         public string GetGameResult()
+            // Check the game result.
+            // Return "X" | "O" if there's a winner, "Draw" if the game ended with no winner.
+            // Otherwise return null.
         {
             string gameResult = null;
 
@@ -73,7 +80,6 @@ namespace GameManagement
                 }
             }
             return gameResult;
-            // Returns non-null string if the game is ended(drawn) or there's a winner.
         }
     }
 }
