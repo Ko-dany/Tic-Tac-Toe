@@ -52,6 +52,7 @@
             // picSlot1
             // 
             this.picSlot1.BackColor = System.Drawing.SystemColors.Window;
+            this.picSlot1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picSlot1.Location = new System.Drawing.Point(60, 50);
             this.picSlot1.Name = "picSlot1";
             this.picSlot1.Size = new System.Drawing.Size(110, 110);
@@ -63,7 +64,8 @@
             // picSlot2
             // 
             this.picSlot2.BackColor = System.Drawing.SystemColors.Window;
-            this.picSlot2.Location = new System.Drawing.Point(217, 50);
+            this.picSlot2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSlot2.Location = new System.Drawing.Point(212, 50);
             this.picSlot2.Name = "picSlot2";
             this.picSlot2.Size = new System.Drawing.Size(110, 110);
             this.picSlot2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -74,7 +76,8 @@
             // picSlot3
             // 
             this.picSlot3.BackColor = System.Drawing.SystemColors.Window;
-            this.picSlot3.Location = new System.Drawing.Point(368, 50);
+            this.picSlot3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSlot3.Location = new System.Drawing.Point(359, 50);
             this.picSlot3.Name = "picSlot3";
             this.picSlot3.Size = new System.Drawing.Size(110, 110);
             this.picSlot3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -85,7 +88,8 @@
             // picSlot4
             // 
             this.picSlot4.BackColor = System.Drawing.SystemColors.Window;
-            this.picSlot4.Location = new System.Drawing.Point(60, 191);
+            this.picSlot4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSlot4.Location = new System.Drawing.Point(60, 185);
             this.picSlot4.Name = "picSlot4";
             this.picSlot4.Size = new System.Drawing.Size(110, 110);
             this.picSlot4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -96,7 +100,8 @@
             // picSlot5
             // 
             this.picSlot5.BackColor = System.Drawing.SystemColors.Window;
-            this.picSlot5.Location = new System.Drawing.Point(217, 191);
+            this.picSlot5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSlot5.Location = new System.Drawing.Point(212, 185);
             this.picSlot5.Name = "picSlot5";
             this.picSlot5.Size = new System.Drawing.Size(110, 110);
             this.picSlot5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -107,7 +112,8 @@
             // picSlot6
             // 
             this.picSlot6.BackColor = System.Drawing.SystemColors.Window;
-            this.picSlot6.Location = new System.Drawing.Point(368, 191);
+            this.picSlot6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSlot6.Location = new System.Drawing.Point(359, 185);
             this.picSlot6.Name = "picSlot6";
             this.picSlot6.Size = new System.Drawing.Size(110, 110);
             this.picSlot6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,7 +124,8 @@
             // picSlot7
             // 
             this.picSlot7.BackColor = System.Drawing.SystemColors.Window;
-            this.picSlot7.Location = new System.Drawing.Point(60, 324);
+            this.picSlot7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSlot7.Location = new System.Drawing.Point(60, 318);
             this.picSlot7.Name = "picSlot7";
             this.picSlot7.Size = new System.Drawing.Size(110, 110);
             this.picSlot7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -129,7 +136,8 @@
             // picSlot8
             // 
             this.picSlot8.BackColor = System.Drawing.SystemColors.Window;
-            this.picSlot8.Location = new System.Drawing.Point(217, 324);
+            this.picSlot8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSlot8.Location = new System.Drawing.Point(212, 318);
             this.picSlot8.Name = "picSlot8";
             this.picSlot8.Size = new System.Drawing.Size(110, 110);
             this.picSlot8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -140,7 +148,8 @@
             // picSlot9
             // 
             this.picSlot9.BackColor = System.Drawing.SystemColors.Window;
-            this.picSlot9.Location = new System.Drawing.Point(368, 324);
+            this.picSlot9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSlot9.Location = new System.Drawing.Point(359, 318);
             this.picSlot9.Name = "picSlot9";
             this.picSlot9.Size = new System.Drawing.Size(110, 110);
             this.picSlot9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -152,9 +161,10 @@
             // 
             this.lblGameStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblGameStatus.AutoSize = true;
-            this.lblGameStatus.Location = new System.Drawing.Point(223, 467);
+            this.lblGameStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameStatus.Location = new System.Drawing.Point(197, 462);
             this.lblGameStatus.Name = "lblGameStatus";
-            this.lblGameStatus.Size = new System.Drawing.Size(94, 16);
+            this.lblGameStatus.Size = new System.Drawing.Size(144, 25);
             this.lblGameStatus.TabIndex = 1;
             this.lblGameStatus.Text = "Player X\'s turn!";
             this.lblGameStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -163,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 513);
+            this.ClientSize = new System.Drawing.Size(533, 531);
             this.Controls.Add(this.lblGameStatus);
             this.Controls.Add(this.picSlot9);
             this.Controls.Add(this.picSlot6);

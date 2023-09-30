@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Program: PROG 2370
+ * Purpose: Assignment 1
+ * Revision History:
+ *      created by Dahyun Ko, Sep/20/2023
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,13 +25,15 @@ namespace DkoAssignment1
             InitializeComponent();
         }
 
-        /************ Decalre global variables ************/
-        private List<PictureBox> slotsList = new List<PictureBox>();
+        /************ Decalre Global Variables ************/
+
+        private List<PictureBox> slotsList;
+
         private GameManager _gameManager;
         private string currentPlayer;
-        /**************************************************/
 
-        /************ Set helper methods ************/
+        /************ Set Helper Methods ************/
+
         private void InitializeGame()
         {
            foreach(PictureBox slot in slotsList)
@@ -38,22 +47,18 @@ namespace DkoAssignment1
 
         private void ShowWhoseTurn()
         {
-            lblGameStatus.Text = $"Player {currentPlayer}'s turn!";
+            lblGameStatus.Text = $"Player {currentPlayer}'s turn.";
         }
-        /**************************************************/
 
+        /************ Form Controller Event Handlers ************/
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            slotsList.Add(picSlot1);
-            slotsList.Add(picSlot2);
-            slotsList.Add(picSlot3);
-            slotsList.Add(picSlot4);
-            slotsList.Add(picSlot5);
-            slotsList.Add(picSlot6);
-            slotsList.Add(picSlot7);
-            slotsList.Add(picSlot8);
-            slotsList.Add(picSlot9);
+            slotsList = new List<PictureBox>
+            {
+                picSlot1, picSlot2, picSlot3, picSlot4, picSlot5,
+                picSlot6, picSlot7, picSlot8, picSlot9
+            };
 
             _gameManager = new GameManager();
             currentPlayer = _gameManager.GetCurrentPlayer();
@@ -68,6 +73,7 @@ namespace DkoAssignment1
                 // Extract the slot number (1-9) from the name
 
                 if (_gameManager.SelectedSlotIsValid(selectedSlot))
+                // If the selected slot is available,
                 {
                     if (currentPlayer == "X")
                     {
@@ -79,10 +85,13 @@ namespace DkoAssignment1
                     }
 
                     _gameManager.StoreSlotData(selectedSlot, currentPlayer);
+                    // Store the player and the selected slot to the gameboard
+
 
                     if (_gameManager.GetGameResult() == "X" || _gameManager.GetGameResult() == "O")
+                    // Check game status - if there's winner or it's tie
                     {
-                        MessageBox.Show($"Player \"{_gameManager.GetGameResult()}\" won.");
+                        MessageBox.Show($"Player \"{_gameManager.GetGameResult()}\" wins!");
                         InitializeGame();
                     }
                     else if(_gameManager.GetGameResult() == "Draw")
@@ -98,6 +107,7 @@ namespace DkoAssignment1
                     }
                 }
                 else
+                // If the selected slot is preoccupied,
                 {
                     MessageBox.Show("The selected slot is not valid.");
                 }

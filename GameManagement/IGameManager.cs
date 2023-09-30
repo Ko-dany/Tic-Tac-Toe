@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Program: PROG 2370
+ * Purpose: Assignment 1
+ * Revision History:
+ *      created by Dahyun Ko, Sep/20/2023
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
